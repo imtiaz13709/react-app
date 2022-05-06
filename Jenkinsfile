@@ -15,7 +15,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("imtiaz13709/react-app")
+                    app = docker.build("inaim533/react-app")
                     app.inside {
                         sh 'echo $(curl localhost:1233)'
                     }
@@ -41,7 +41,7 @@ pipeline {
             }
             steps {
                     script {
-                        sh "docker pull imtiaz13709/react-app:${env.BUILD_NUMBER}"
+                        sh "docker pull inaim533/react-app:${env.BUILD_NUMBER}"
                         try {
                             sh "docker stop react-app"
                             sh "docker rm react-app"
@@ -80,7 +80,7 @@ pipeline {
                 input 'Does the staging environment look OK? Did You get 200 response?'
                  milestone(1)
                     script {
-                        sh "docker pull imtiaz13709/react-app:${env.BUILD_NUMBER}"
+                        sh "docker pull inaim533/react-app:${env.BUILD_NUMBER}"
                         try {
                             sh "docker stop react-app"
                             sh "docker rm react-app"
