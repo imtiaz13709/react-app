@@ -48,7 +48,7 @@ pipeline {
                         } catch (err) {
                             echo: 'caught error: $err'
                         }
-                        sh "docker run --restart always --name react-app -p 1233:80 -d imtiaz13709/react-app:${env.BUILD_NUMBER}"
+                        sh "docker run --restart always --name react-app -p 1233:80 -d inaim533/react-app:${env.BUILD_NUMBER}"
                     }
             }
         }
@@ -87,7 +87,7 @@ pipeline {
                         } catch (err) {
                             echo: 'caught error: $err'
                         }
-                        sh "docker run --restart always --name react-app -p 1233:80 -d wessamabdelwahab/react-app:${env.BUILD_NUMBER}"
+                        sh "docker run --restart always --name react-app -p 1233:80 -d inaim533/react-app:${env.BUILD_NUMBER}"
                     }
             }
         }
